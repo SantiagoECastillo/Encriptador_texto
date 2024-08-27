@@ -22,9 +22,20 @@ function btnDesencriptar(){
     contenidoDesencriptador.style.display = 'none';
 }
 
-function btnCopiar(){
-    
-}
+copiar.addEventListener('click', function() {
+    mensaje.select();
+    mensaje.setSelectionRange(0, 99999); 
+
+
+    document.execCommand('copy');
+
+   
+    var avisoDeCopia = document.querySelector(".desencriptar-texto-dos");
+    var textoMensaje = document.querySelector(".")
+
+    avisoDeCopia.textContent = "Texto copiado al portapapeles!";
+    mensaje.value = "";
+});
 
 function encriptar(stringEncriptado){
     let matrizCodigo = [["e", "enter"], ["i", "ines"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
@@ -50,26 +61,3 @@ function desencriptar(stringDesencriptado){
     }
     return stringDesencriptado;
 }
-
-
-copiar.addEventListener('click', function() {
-    mensaje.select();
-    mensaje.setSelectionRange(0, 99999); 
-
-
-    document.execCommand('copy');
-
-   
-    var avisoDeCopia = document.querySelector(".desencriptar-texto-dos");
-    var textoMensaje = document.querySelector(".")
-
-    avisoDeCopia.textContent = "Texto copiado al portapapeles!";
-    mensaje.value = "";
-});
-
-/*
-textArea.addEventListener('click', function() {
-    mensaje.value = ""
-    contenidoDesencriptador.style.display = 'flex';
-});
-*/

@@ -1,5 +1,6 @@
 :root{
     --color-primario: #0b6730;
+    --color-texto: #a5a8a7;
 }
 
 * {
@@ -51,11 +52,12 @@ main{
     border-radius: 15px;
     resize: none;
     background: transparent;
+    color: var(--color-texto);
 }
 
 
 .encriptar::placeholder,:focus{
-    color: #a5a8a7;
+    color: var(--color-texto);
 }
 
 .encriptador-aviso{
@@ -182,7 +184,7 @@ main{
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
-    color: #495057;
+    color: var(--color-texto);
     background: transparent;
     border: none;
     resize: none;
